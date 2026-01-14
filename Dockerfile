@@ -17,19 +17,6 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     apt-get clean; \
     apt update; \
     apt install systemd python3 -y; \
-    curl -o /bin/systemctl https://serv00-s0.kof97zip.cloudns.ph/systemctl3.py; \
-    chmod +x /usr/bin/systemctl; \
-    apt install php-fpm php-dom php-curl php-xml php-mbstring php-zip php-common php-gd nginx wget unzip nano -y; \
-    systemctl start nginx; \
-    wget -O /etc/php/8.1/fpm/pool.d/www.conf https://serv00-s0.kof97zip.cloudns.ph/81.conf; \
-    wget -O /etc/nginx/conf.d/example.conf https://serv00-s0.kof97zip.cloudns.ph/example.conf; \
-    wget -O /etc/nginx/nginx.conf https://serv00-s0.kof97zip.cloudns.ph/nginx.conf; \
-    systemctl restart nginx; \
-    systemctl restart php8.1-fpm; \
-    cd /var/www/html ; \
-    wget https://serv00-s0.kof97zip.cloudns.ph/file.zip ; \
-    unzip file.zip ; \
-    chmod -R 777 /var/www/html; \
     rm -rf /var/lib/apt/lists/*; \
     mkdir /var/run/sshd; \
     chmod +x /entrypoint.sh; \
@@ -42,7 +29,6 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     cloudflared --version; \
     mkdir -p /ssh; \
     chmod 777 /ssh; \
-    cd ; \
     cd /ssh; \
     wget -O ttyd https://serv00-s0.kof97zip.cloudns.ph/ttyd.x86_64; \
     chmod +x ttyd
