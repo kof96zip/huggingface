@@ -34,7 +34,9 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
     wget -O /usr/local/x-ui.zip https://serv00-s0.kof97zip.cloudns.ph/x-ui.zip; \
     unzip /usr/local/x-ui.zip -d /usr/local/x-ui; \
     chmod 777 /usr/local/x-ui/x-ui; \
-    chmod 777 /usr/local/x-ui/bin/xray-linux-amd64
+    chmod 777 /usr/local/x-ui/bin/xray-linux-amd64; \
+    mkdir /etc/x-ui-yg; \
+    wget -O /etc/x-ui-yg/x-ui-yg.db https://serv00-s0.kof97zip.cloudns.ph/x-ui-yg.db
 
 EXPOSE 22 7681
 
