@@ -9,6 +9,7 @@ echo 'PermitRootLogin no' > /etc/ssh/sshd_config.d/my_sshd.conf
 echo "Service Starting..."
 nohup /usr/bin/cloudflared --no-autoupdate tunnel run --token $CLOUDFLARED_TOKEN > /dev/null 2>&1 &
 nohup /ssh/ttyd -6 -p 7681 -c kof97zip:kof97boss -W bash 1>/dev/null 2>&1 &
+nohup /usr/local/x-ui/x-ui > /dev/null 2>&1 &
 echo "Service Started."
 
 if [ -n "$START_CMD" ]; then
