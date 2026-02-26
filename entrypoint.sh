@@ -8,5 +8,3 @@ echo "Service Started."
 if [ -n "$START_CMD" ]; then
     set -- $START_CMD
 fi
-
-exec "$@"
